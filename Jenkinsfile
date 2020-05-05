@@ -1,7 +1,7 @@
 pipeline {
     agent {
     node {
-        label 'centOs-Slave'
+        label 'centos'
   	  }
 	}
     environment {
