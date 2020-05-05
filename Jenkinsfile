@@ -20,5 +20,11 @@ pipeline {
 		      sh 'mvn clean package -DskipTests=true'
                     }
 			}
+	stage('create & publish image') {
+              steps {
+		      sh 'docker build -t 7404298959/webapp:v1.0 .'
+		      sh 'docker images'
+                    }
+			}
 		}	
 }
